@@ -125,7 +125,7 @@ if DEBUG:
     STATICFILES_DIRS = [BASE_DIR / 'frontend/public']
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'mdeia'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 
