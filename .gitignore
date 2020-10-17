@@ -1,1 +1,12 @@
-venv 
+venv/
+__pycache__/
+anildb.sqlite3
+local_settings.py
+
+#svelte 
+
+frontend/node_modules/
+frontend/public/build/
+frontend/scripts
+
+.DS_Store
