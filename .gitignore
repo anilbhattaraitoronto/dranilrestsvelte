@@ -5,6 +5,8 @@ local_settings.py
 media/
 static/
 
+deploy.sh
+
 #svelte 
 
 frontend/node_modules/

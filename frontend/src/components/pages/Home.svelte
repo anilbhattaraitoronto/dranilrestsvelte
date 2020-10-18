@@ -2,7 +2,7 @@
     import { featuredPosts } from "../../stores/postStore.js";
     import { fade } from "svelte/transition";
     let homeImage =
-        "https://images.unsplash.com/photo-1597123894612-44b21fad9dc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1540&q=80";
+        "https://images.unsplash.com/photo-1603035743818-e4e8bb0a0683?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80";
 </script>
 
 <svelte:head>
