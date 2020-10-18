@@ -27,32 +27,36 @@
         {#if $tagPosts.length > 0}
             <div class="posts">
                 {#each $tagPosts as post}
-                    <div class="post card m-2 p-2">
+                    <div class=" columns post card m-2 p-2">
                         {#if post.thumbnail}
-                            <img
-                                src={post.thumbnail}
-                                alt=""
-                                class="card-image"
-                                transition:fade />
+                            <figure class="column is-one-fifth">
+                                <img
+                                    src={post.thumbnail}
+                                    alt=""
+                                    class="card-image"
+                                    transition:fade />
+                            </figure>
                         {/if}
-                        <h3 class="subtitle">
-                            <a
-                                href="#/posts/{post.category.slug}">{post.category.name}</a>
-                        </h3>
-                        <h2 class="title">
-                            <a
-                                href="#/posts/{post.id}/{post.slug}">{post.title}</a>
-                        </h2>
-                        <p>{post.summary}</p>
-                        <p>
-                            <em>Topics: </em>
-                            {#each post.tags as tag}
-                                <span class="button is-small">
-                                    <a
-                                        href="#/tagposts/{tag.slug}"
-                                        on:click={() => getTagPosts(tag.id)}>{tag.name}</a></span>
-                            {/each}
-                        </p>
+                        <div class="column">
+                            <h3 class="subtitle">
+                                <a
+                                    href="#/posts/{post.category.slug}">{post.category.name}</a>
+                            </h3>
+                            <h2 class="title">
+                                <a
+                                    href="#/posts/{post.id}/{post.slug}">{post.title}</a>
+                            </h2>
+                            <p>{post.summary}</p>
+                            <p>
+                                <em>Topics: </em>
+                                {#each post.tags as tag}
+                                    <span class="button is-small">
+                                        <a
+                                            href="#/tagposts/{tag.slug}"
+                                            on:click={() => getTagPosts(tag.id)}>{tag.name}</a></span>
+                                {/each}
+                            </p>
+                        </div>
                     </div>
                 {/each}
             </div>

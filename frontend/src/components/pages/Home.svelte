@@ -22,36 +22,38 @@
             <h2 class="title has-text-centered">Latest Posts</h2>
             <div class="posts container ">
                 {#each $featuredPosts as post}
-                    <div class="post box m-2 p-2">
+                    <div class="columns m-2 p-2 card">
                         {#if post.thumbnail}
-                            <figure transition:fade>
+                            <figure transition:fade class="column is-one-fifth">
                                 <img
                                     src={post.thumbnail}
                                     alt=""
                                     class="card-image" />
                             </figure>
                         {/if}
-                        <h3 class="subtitle">
-                            <a
-                                href="#/posts/{post.category.slug}">{post.category.name}</a>
-                        </h3>
-                        <h2 class="title">
-                            <a
-                                href="#/posts/{post.id}/{post.slug}">{post.title}</a>
-                        </h2>
+                        <div class="column">
+                            <h3 class="subtitle">
+                                <a
+                                    href="#/posts/{post.category.slug}">{post.category.name}</a>
+                            </h3>
+                            <h2 class="title">
+                                <a
+                                    href="#/posts/{post.id}/{post.slug}">{post.title}</a>
+                            </h2>
 
-                        <p>{post.summary}</p>
-                        <p>
-                            <em>Topics: </em>
-                            {#each post.tags as tag}
-                                <span class="button is-small">
-                                    <a
-                                        href="#/tagposts/{tag.slug}">{tag.name}</a></span>
-                            {/each}
-                        </p>
-                        <p class="is-italic is-size-7 has-text-weight-bold">
-                            {new Date(post.posted_date).toDateString()}
-                        </p>
+                            <p>{post.summary}</p>
+                            <p>
+                                <em>Topics: </em>
+                                {#each post.tags as tag}
+                                    <span class="button is-small">
+                                        <a
+                                            href="#/tagposts/{tag.slug}">{tag.name}</a></span>
+                                {/each}
+                            </p>
+                            <p class="is-italic is-size-7 has-text-weight-bold">
+                                {new Date(post.posted_date).toDateString()}
+                            </p>
+                        </div>
                     </div>
                 {/each}
             </div>
