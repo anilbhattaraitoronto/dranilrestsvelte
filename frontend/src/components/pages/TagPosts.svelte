@@ -37,7 +37,7 @@
                                     transition:fade />
                             </figure>
                         {/if}
-                        <div class="column">
+                        <div class="column card-content">
                             <h3 class="subtitle">
                                 <a
                                     href="#/posts/{post.category.slug}">{post.category.name}</a>
