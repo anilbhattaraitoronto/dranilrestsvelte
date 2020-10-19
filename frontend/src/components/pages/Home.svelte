@@ -43,6 +43,11 @@
 
                             <p>{post.summary}</p>
                             <p>
+                                <a
+                                    href="#/posts/{post.id}/{post.slug}"
+                                    class="button is-outlined">Read full</a>
+                            </p>
+                            <p>
                                 <em>Topics: </em>
                                 {#each post.tags as tag}
                                     <span class="button is-small">
