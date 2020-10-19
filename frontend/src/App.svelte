@@ -115,7 +115,7 @@
             </div>
         </div>
     </nav>
-    <div class="container columns ">
+    <div class="container columns my-2 ">
         <div class="container column is-three-quarters ">
             <Router {routes} />
         </div>
