@@ -2,7 +2,7 @@
     import { featuredPosts } from "../../stores/postStore.js";
     import { fade } from "svelte/transition";
     let homeImage =
-        "https://images.unsplash.com/photo-1439234739645-fa53193889c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80";
+        "https://images.unsplash.com/photo-1565527891433-117833507ed8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80";
 </script>
 
 <svelte:head>
@@ -25,7 +25,7 @@
                     <div class="card my-2 p-1">
                         <div class="columns  is-mobile">
                             {#if post.thumbnail}
-                                <figure class="column is-one-fourth">
+                                <figure class="column is-one-fifth">
                                     <img
                                         src={post.thumbnail}
                                         alt=""
@@ -37,25 +37,22 @@
                                     <span
                                         class="is-size-7 is-italic">{new Date(post.posted_date).toDateString()}</span>
                                 </p>
-                                <h3 class="is-size-6 is-italic">
+                                <h3 class="is-size-6 is-italic has-text-black">
                                     <a
-                                        href="#/posts/{post.category.slug}"
-                                        class="">{post.category.name}</a>
+                                        href="#/posts/{post.category.slug}">{post.category.name}</a>
                                 </h3>
                                 <h2 class="is-size-4">
                                     <a
-                                        href="#/posts/{post.id}/{post.slug}">{post.title}</a>
+                                        href="#/posts/{post.id}/{post.slug}"
+                                        class="has-text-black">{post.title}</a>
                                 </h2>
 
                                 <p class="is-size-5 is-italic my-1">
                                     {post.summary.substring(0, 50)}
                                     ...
-                                </p>
-                                <p class="has-text-right my-1">
                                     <a
                                         href="#/posts/{post.id}/{post.slug}"
-                                        class="button is-outlined is-link">Read
-                                        full</a>
+                                        class="is-link">Read full</a>
                                 </p>
                             </div>
                         </div>

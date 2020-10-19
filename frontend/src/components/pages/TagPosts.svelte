@@ -89,18 +89,16 @@
                                 </h3>
                                 <h2 class="is-size-4">
                                     <a
-                                        href="#/posts/{post.id}/{post.slug}">{post.title}</a>
+                                        href="#/posts/{post.id}/{post.slug}"
+                                        class="has-text-black">{post.title}</a>
                                 </h2>
 
                                 <p class="is-size-5 is-italic my-1">
                                     {post.summary.substring(0, 50)}
                                     ...
-                                </p>
-                                <p class="has-text-right my-1">
                                     <a
                                         href="#/posts/{post.id}/{post.slug}"
-                                        class="button is-outlined is-link">Read
-                                        full</a>
+                                        class="is-link">Read full</a>
                                 </p>
                             </div>
                         </div>
