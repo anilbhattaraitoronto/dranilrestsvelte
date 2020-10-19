@@ -69,8 +69,8 @@
     <title>Welcome to Dr Anil</title>
 </svelte:head>
 
-<main class="section container is-link p-0">
-    <nav class="navbar container is-link px-2 m-0 has-shadow">
+<main class="section container is-link">
+    <nav class="navbar container is-link px-2 has-shadow is-fixed-top">
         <div class="navbar-brand p-0">
             <a href="#/" class="navbar-item is-size-4">Home</a>
             <span
