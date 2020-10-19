@@ -72,7 +72,7 @@
 <main class="section container is-link p-0">
     <nav class="navbar container is-link px-2 m-0 has-shadow">
         <div class="navbar-brand p-0">
-            <a href="#/" class="navbar-item">Home</a>
+            <a href="#/" class="navbar-item is-size-4">Home</a>
             <span
                 class=" navbar-burger burger {is_active ? 'is-active' : ''}"
                 on:click={toggleMenu}>
