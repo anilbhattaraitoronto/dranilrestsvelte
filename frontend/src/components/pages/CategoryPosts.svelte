@@ -38,7 +38,7 @@
                                 <a
                                     href="#/posts/{post.id}/{post.slug}">{post.title}</a>
                             </h2>
-                            <p class="is-size-7 is-italic my-6">
+                            <p class="is-size-5 is-italic my-6">
                                 {post.summary}
                             </p>
                             <p class="has-text-right my-3">

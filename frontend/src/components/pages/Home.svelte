@@ -24,7 +24,7 @@
                 {#each $featuredPosts as post}
                     <div class="columns m-2 p-2 card">
                         {#if post.thumbnail}
-                            <figure transition:fade class="column is-one-fifth">
+                            <figure class="column is-one-fifth">
                                 <img
                                     src={post.thumbnail}
                                     alt=""
@@ -41,7 +41,7 @@
                                     href="#/posts/{post.id}/{post.slug}">{post.title}</a>
                             </h2>
 
-                            <p class="is-size-7 is-italic my-6">
+                            <p class="is-size-5 is-italic my-6">
                                 {post.summary}
                             </p>
                             <p class="has-text-right my-3">
