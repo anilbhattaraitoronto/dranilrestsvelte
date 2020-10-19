@@ -15,7 +15,7 @@
 </svelte:head>
 
 <main class="section p-2">
-    <h2 class="title">{params.slug}</h2>
+    <h2 class="title">{params.slug.toUpperCase()}</h2>
     <article class="container">
         {#if $categoryPosts.length > 0}
             <div class="posts">
