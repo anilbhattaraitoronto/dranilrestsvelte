@@ -42,7 +42,7 @@
             </div>
 
             <footer class="card-footer">
-                <span card-footer-item>Topics</span>:
+                <em class="card-footer-item">Topics:</em>
                 {#each $postDetail.tags as tag}
                     <span class="card-footer-item">
                         <a href="#/tagposts/{tag.slug}">{tag.name}</a>
