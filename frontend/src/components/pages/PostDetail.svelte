@@ -39,7 +39,10 @@
                     href="#/posts/{$postDetail.category.slug}">{$postDetail.category.name}</a>
             </h3>
             <h2 class="title">{$postDetail.title}</h2>
-            <p><em>Summary</em>: {$postDetail.summary}</p>
+            <p class="is-size-7 is-italic my-6">
+                <em>Summary:</em>
+                {$postDetail.summary}
+            </p>
             <p />
             <div class="content container">
                 {@html $postDetail.content}

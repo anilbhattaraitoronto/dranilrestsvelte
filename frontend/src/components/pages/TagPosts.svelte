@@ -46,13 +46,15 @@
                                 <a
                                     href="#/posts/{post.id}/{post.slug}">{post.title}</a>
                             </h2>
-                            <p>{post.summary}</p>
-                            <p>
+                            <p class="is-size-7 is-italic my-6">
+                                {post.summary}
+                            </p>
+                            <p class="has-text-right my-3">
                                 <a
                                     href="#/posts/{post.id}/{post.slug}"
                                     class="button is-outlined">Read full</a>
                             </p>
-                            <p>
+                            <p class="has-text-right my-6">
                                 <em>Topics: </em>
                                 {#each post.tags as tag}
                                     <span class="button is-small">
@@ -60,6 +62,9 @@
                                             href="#/tagposts/{tag.slug}"
                                             on:click={() => getTagPosts(tag.id)}>{tag.name}</a></span>
                                 {/each}
+                            </p>
+                            <p class="is-italic is-size-7 has-text-weight-bold">
+                                {new Date(post.posted_date).toDateString()}
                             </p>
                         </div>
                     </div>
