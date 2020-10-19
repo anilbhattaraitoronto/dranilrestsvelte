@@ -47,7 +47,7 @@
                             <p class="has-text-right my-3">
                                 <a
                                     href="#/posts/{post.id}/{post.slug}"
-                                    class="button is-outlined">Read full</a>
+                                    class="button is-outlined is-link">Read full</a>
                             </p>
                             <p class="has-text-right my-6">
                                 <em>Topics: </em>
