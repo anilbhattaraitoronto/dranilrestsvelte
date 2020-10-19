@@ -12,7 +12,7 @@
 <main>
     <div class="container card">
         <div class="card-image is-3by4">
-            <figure class="image p-3" transition:fade>
+            <figure class="image" transition:fade>
                 <img src={homeImage} alt="" />
             </figure>
         </div>
