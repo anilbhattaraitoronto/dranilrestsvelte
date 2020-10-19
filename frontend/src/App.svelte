@@ -69,10 +69,10 @@
     <title>Welcome to Dr Anil</title>
 </svelte:head>
 
-<main class="section container p-0">
-    <nav class="navbar container is-white p-2 m-0 has-shadow">
-        <div class="navbar-brand">
-            <a href="#/" class="navbar-item button ">Home</a>
+<main class="section container is-link p-0">
+    <nav class="navbar container is-link px-2 m-0 has-shadow">
+        <div class="navbar-brand p-0">
+            <a href="#/" class="navbar-item">Home</a>
             <span
                 class=" navbar-burger burger {is_active ? 'is-active' : ''}"
                 on:click={toggleMenu}>
@@ -86,12 +86,12 @@
             <div class="navbar-end">
                 <div class="navbar-item has-dropdown is-hoverable">
                     <span
-                        class="navbar-link button is-info is-outlined is-small">Categories</span>
+                        class="navbar-link  is-size-4 button is-link has-text-right my-0 mx-2">Categories</span>
                     <div class="navbar-dropdown">
                         {#if $categorystore.length > 0}
                             {#each $categorystore as category}
                                 <a
-                                    class=" navbar-item button is-small is-link my-1"
+                                    class=" navbar-item is-size-5 is-link  has-text-right"
                                     href="#/posts/{category.slug}"
                                     on:click={() => getCategoryPosts(category.id)}>{category.name}</a>
                             {/each}
@@ -100,12 +100,12 @@
                 </div>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <span
-                        class="navbar-link button is-info is-outlined is-small">Topics</span>
+                        class="navbar-link is-size-4 button is-link has-text-right my-0 mx-2">Topics</span>
                     <div class="navbar-dropdown ">
                         {#if $tagstore.length > 0}
                             {#each $tagstore as item}
                                 <a
-                                    class="button is-small navbar-item is-link my-1"
+                                    class=" is-size-5 navbar-item is-link  has-text-right"
                                     href="#/tagposts/{item.slug}"
                                     on:click={() => getTagPosts(item.id)}>{item.name}</a>
                             {/each}
