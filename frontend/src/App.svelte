@@ -70,7 +70,8 @@
 </svelte:head>
 
 <main class="section container is-link">
-    <nav class="navbar container is-link px-2 has-shadow is-fixed-top">
+    <nav
+        class="navbar container is-link px-2 has-shadow is-fixed-top has-background-black-bis">
         <div class="navbar-brand p-0">
             <a href="#/" class="navbar-item is-size-4">Home</a>
             <span
@@ -86,7 +87,7 @@
             <div class="navbar-end">
                 <div class="navbar-item has-dropdown is-hoverable">
                     <span
-                        class="navbar-link  is-size-5 is-link has-text-right my-0 mx-2">Categories</span>
+                        class="navbar-link  is-size-5 is-link has-text-right">Categories</span>
                     <div class="navbar-dropdown">
                         {#if $categorystore.length > 0}
                             {#each $categorystore as category}
@@ -100,7 +101,7 @@
                 </div>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <span
-                        class="navbar-link is-size-5 is-link has-text-right my-0 mx-2">Topics</span>
+                        class="navbar-link is-size-5 is-link has-text-right my-0">Topics</span>
                     <div class="navbar-dropdown ">
                         {#if $tagstore.length > 0}
                             {#each $tagstore as item}
