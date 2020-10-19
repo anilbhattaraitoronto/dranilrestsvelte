@@ -32,7 +32,6 @@
     const routes = {
         "/": Home,
         "/posts/:slug": CategoryPosts,
-
         "/posts/:id/:slug": PostDetail,
         "/tagposts/:slug": TagPosts,
     };
@@ -45,14 +44,14 @@
                 post.tags.find((item) => item.id == id)
             );
         });
-        // is_active == false ? (is_active = true) : (is_active = false);
+        is_active == false ? (is_active = true) : (is_active = false);
     }
 
     function getCategoryPosts(id) {
         latestPosts.subscribe((data) => {
             $categoryPosts = data.filter((post) => post.category.id == id);
         });
-        // is_active == false ? (is_active = true) : (is_active = false);
+        is_active == false ? (is_active = true) : (is_active = false);
     }
     function getPostDetail(id) {
         latestPosts.subscribe((data) => {
