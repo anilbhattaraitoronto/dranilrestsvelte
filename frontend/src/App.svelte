@@ -87,12 +87,12 @@
             <div class="navbar-end">
                 <div class="navbar-item has-dropdown is-hoverable">
                     <span
-                        class="navbar-link  is-size-5 is-link has-text-right">Categories</span>
-                    <div class="navbar-dropdown">
+                        class="navbar-link  is-size-5 is-black has-text-right">Categories</span>
+                    <div class="navbar-dropdown p-0">
                         {#if $categorystore.length > 0}
                             {#each $categorystore as category}
                                 <a
-                                    class=" navbar-item is-size-5 is-link  has-text-right"
+                                    class=" navbar-item button is-black is-small px-1 py-0  has-text-right mt-1"
                                     href="#/posts/{category.slug}"
                                     on:click={() => getCategoryPosts(category.id)}>{category.name}</a>
                             {/each}
@@ -101,12 +101,12 @@
                 </div>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <span
-                        class="navbar-link is-size-5 is-link has-text-right my-0">Topics</span>
-                    <div class="navbar-dropdown ">
+                        class="navbar-link is-size-5 is-black has-text-right my-0">Topics</span>
+                    <div class="navbar-dropdown p-0 m-0 ">
                         {#if $tagstore.length > 0}
                             {#each $tagstore as item}
                                 <a
-                                    class=" is-size-5 navbar-item is-link  has-text-right"
+                                    class="  navbar-item button is-black is-small  is-capitalized px-1 py-0 mt-1 has-text-right"
                                     href="#/tagposts/{item.slug}"
                                     on:click={() => getTagPosts(item.id)}>{item.name}</a>
                             {/each}

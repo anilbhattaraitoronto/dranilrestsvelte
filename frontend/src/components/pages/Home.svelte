@@ -19,7 +19,7 @@
     </div>
     <article class="container">
         {#if $featuredPosts.length > 0}
-            <h2 class="title has-text-centered">Featured Posts</h2>
+            <h2 class="title has-text-centered my-4">Featured Posts</h2>
             <div class="posts container ">
                 {#each $featuredPosts as post}
                     <div class="card my-2 p-1">

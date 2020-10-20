@@ -32,9 +32,9 @@
                     href="#/posts/{$postDetail.category.slug}">{$postDetail.category.name}</a>
             </h3>
             <h2 class="title">{$postDetail.title}</h2>
-            <p class="is-size-5 is-italic my-6">
+            <p class="is-size-5 is-italic my-6 has-background-light p-2">
                 <em> <strong>Summary:</strong> </em>
-                {$postDetail.summary}
+                {@html $postDetail.summary}
             </p>
             <p />
             <div class="content container">
