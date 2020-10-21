@@ -21,7 +21,7 @@
     <title>{params.slug.toUpperCase()} | Dr Anil B</title>
 </svelte:head>
 
-<main class="section p-2">
+<main class="section p-0 mt-6">
     <h2 class="title is-capitalized has-text-centered">{params.slug}</h2>
     <article class="container">
         {#if $tagPosts.length > 0}
@@ -30,7 +30,7 @@
                     <div class="card my-2 p-1">
                         <div class="columns  is-mobile">
                             {#if post.thumbnail}
-                                <figure class="column is-one-fourth">
+                                <figure class="column is-one-fifth">
                                     <img
                                         src={post.thumbnail}
                                         alt=""

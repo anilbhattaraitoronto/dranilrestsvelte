@@ -69,7 +69,7 @@
     <title>Welcome to Dr Anil</title>
 </svelte:head>
 
-<main class="section container is-link">
+<main class="section container p-0 ">
     <nav
         class="navbar container is-link px-2 has-shadow is-fixed-top has-background-black-bis">
         <div class="navbar-brand p-0">

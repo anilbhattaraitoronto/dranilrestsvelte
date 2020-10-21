@@ -17,6 +17,7 @@
             </figure>
         </div>
     </div>
+
     <article class="container">
         {#if $featuredPosts.length > 0}
             <h2 class="title has-text-centered my-4">Featured Posts</h2>
