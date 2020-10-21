@@ -73,7 +73,13 @@
     <nav
         class="navbar container is-link px-2 has-shadow is-fixed-top has-background-black-bis">
         <div class="navbar-brand p-0">
-            <a href="#/" class="navbar-item is-size-4">Home</a>
+            <a href="#/" class="navbar-item is-size-4 is-white">
+                <img
+                    src="/static/ab_logo_bw.png"
+                    alt=""
+                    style="background:white; padding:4px; height:100px;" />
+                Home
+            </a>
             <span
                 class=" navbar-burger burger {is_active ? 'is-active' : ''}"
                 on:click={toggleMenu}>
