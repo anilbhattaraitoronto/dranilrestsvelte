@@ -21,7 +21,7 @@
                             Featured Posts
                         </h2>
                         {#each $featuredPosts as post}
-                            <div class="card my-2">
+                            <div class="card my-2 has-text-left">
                                 <div class=" is-mobile">
                                     {#if post.imageurl}
                                         <div class="card-image">
