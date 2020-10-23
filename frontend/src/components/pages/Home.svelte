@@ -18,7 +18,7 @@
         </div>
     </div> -->
 
-    <article class="container card mt-6">
+    <article class="container mt-6">
         {#if $featuredPosts.length > 0}
             <h2 class="title has-text-centered my-4">Featured Posts</h2>
             <div class="posts container ">
