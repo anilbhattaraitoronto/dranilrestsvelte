@@ -65,10 +65,15 @@
     }
 </script>
 
+<style>
+    li {
+        list-style-type: none;
+    }
+</style>
+
 <svelte:head>
     <title>Welcome to Dr Anil</title>
 </svelte:head>
-
 <main class="section container p-0 ">
     <nav
         class="navbar container is-link px-2 has-shadow is-fixed-top has-background-black-bis">
@@ -128,26 +133,23 @@
         </div>
         <div class=" container column hero is-light" id="cart">
             <div class="hero-body">
-                <h2 class="title has-text-centered">Recent Posts</h2>
+                <h2 class="title has-text-centered">Recent</h2>
                 {#if $postTitles.length > 0}
-                    <ul class="title-nav p-2">
-                        {#each $postTitles as item}
-                            <div>
-                                <p>{item.category.name}</p>
-                                <p class="is-italic is-size-7">
-                                    {new Date(item.posted_date).toDateString()}
-                                </p>
-                                <li>
-                                    <a
-                                        href="#/posts/{item.id}/{item.slug}"
-                                        class="is-link"
-                                        on:click={() => getPostDetail(item.id)}>{item.title}</a>
-                                </li>
-                            </div>
-
+                    {#each $postTitles as item}
+                        <div>
+                            <p>{item.category.name}</p>
+                            <p class="is-italic is-size-7">
+                                {new Date(item.posted_date).toDateString()}
+                            </p>
+                            <li>
+                                <a
+                                    href="#/posts/{item.id}/{item.slug}"
+                                    class="is-link"
+                                    on:click={() => getPostDetail(item.id)}>{item.title}</a>
+                            </li>
                             <hr />
-                        {/each}
-                    </ul>
+                        </div>
+                    {/each}
                 {/if}
             </div>
         </div>

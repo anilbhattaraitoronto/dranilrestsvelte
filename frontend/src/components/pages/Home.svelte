@@ -23,7 +23,9 @@
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <h2 class="title is-2">Welcome</h2>
-                    <p class="has-text-info">A new world awaits, always!</p>
+                    <p class="has-text-danger-dark">
+                        A new world awaits, always!
+                    </p>
                 </div>
             </div>
         </div>
@@ -51,11 +53,11 @@
                                     <span
                                         class="is-size-7 is-italic">{new Date(post.posted_date).toDateString()}</span>
                                 </p>
-                                <h3 class="is-size-6 is-italic has-text-black">
+                                <h3 class="is-size-6 is-italic">
                                     <a
                                         href="#/posts/{post.category.slug}">{post.category.name}</a>
                                 </h3>
-                                <h2 class="is-size-4">
+                                <h2 class="is-size-4 title">
                                     <a
                                         href="#/posts/{post.id}/{post.slug}"
                                         class="has-text-black">{post.title}</a>
