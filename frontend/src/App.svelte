@@ -126,29 +126,31 @@
         <div class="container column is-three-quarters ">
             <Router {routes} />
         </div>
-        <di class="cart container column" id="cart">
-            <h2 class="title has-text-centered">Recent Posts</h2>
-            {#if $postTitles.length > 0}
-                <ul class="title-nav p-2">
-                    {#each $postTitles as item}
-                        <div>
-                            <p>{item.category.name}</p>
-                            <p class="is-italic is-size-7">
-                                {new Date(item.posted_date).toDateString()}
-                            </p>
-                            <li>
-                                <a
-                                    href="#/posts/{item.id}/{item.slug}"
-                                    class="is-link"
-                                    on:click={() => getPostDetail(item.id)}>{item.title}</a>
-                            </li>
-                        </div>
+        <div class=" container column hero is-light" id="cart">
+            <div class="hero-body">
+                <h2 class="title has-text-centered">Recent Posts</h2>
+                {#if $postTitles.length > 0}
+                    <ul class="title-nav p-2">
+                        {#each $postTitles as item}
+                            <div>
+                                <p>{item.category.name}</p>
+                                <p class="is-italic is-size-7">
+                                    {new Date(item.posted_date).toDateString()}
+                                </p>
+                                <li>
+                                    <a
+                                        href="#/posts/{item.id}/{item.slug}"
+                                        class="is-link"
+                                        on:click={() => getPostDetail(item.id)}>{item.title}</a>
+                                </li>
+                            </div>
 
-                        <hr />
-                    {/each}
-                </ul>
-            {/if}
-        </di>
+                            <hr />
+                        {/each}
+                    </ul>
+                {/if}
+            </div>
+        </div>
     </div>
 </main>
 <Footer />

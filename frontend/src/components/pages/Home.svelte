@@ -18,22 +18,35 @@
         </div>
     </div> -->
 
-    <article class="container mt-6">
+    <article class="container">
+        <div class="hero is-light">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h2 class="title is-2">Welcome</h2>
+                    <p class="has-text-info">A new world awaits, always!</p>
+                </div>
+            </div>
+        </div>
         {#if $featuredPosts.length > 0}
             <h2 class="title has-text-centered my-4">Featured Posts</h2>
             <div class="posts container ">
                 {#each $featuredPosts as post}
                     <div class="card my-2 p-1">
                         <div class=" is-mobile">
-                            {#if post.image}
-                                <figure class=" is-one-fifth">
-                                    <img
-                                        src={post.image}
-                                        alt=""
-                                        class="card-image" />
-                                </figure>
+                            {#if post.imageurl}
+                                <div class="card-image">
+                                    <figure class="image" transition:fade>
+                                        <img src={post.imageurl} alt="" />
+                                    </figure>
+                                </div>
+                            {:else if post.image}
+                                <div class="card-image ">
+                                    <figure class="image" transition:fade>
+                                        <img src={post.image} alt="" />
+                                    </figure>
+                                </div>
                             {/if}
-                            <div class="column card-content">
+                            <div class=" card-content">
                                 <p>
                                     <span
                                         class="is-size-7 is-italic">{new Date(post.posted_date).toDateString()}</span>
