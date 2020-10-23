@@ -10,25 +10,25 @@
 </svelte:head>
 
 <main>
-    <div class="container card">
+    <!-- <div class="container card">
         <div class="card-image is-3by4">
             <figure class="image" transition:fade>
                 <img src={homeImage} alt="" />
             </figure>
         </div>
-    </div>
+    </div> -->
 
-    <article class="container">
+    <article class="container card mt-6">
         {#if $featuredPosts.length > 0}
             <h2 class="title has-text-centered my-4">Featured Posts</h2>
             <div class="posts container ">
                 {#each $featuredPosts as post}
                     <div class="card my-2 p-1">
-                        <div class="columns  is-mobile">
-                            {#if post.thumbnail}
-                                <figure class="column is-one-fifth">
+                        <div class=" is-mobile">
+                            {#if post.image}
+                                <figure class=" is-one-fifth">
                                     <img
-                                        src={post.thumbnail}
+                                        src={post.image}
                                         alt=""
                                         class="card-image" />
                                 </figure>
@@ -48,13 +48,17 @@
                                         class="has-text-black">{post.title}</a>
                                 </h2>
 
-                                <p class="is-size-5 is-italic my-1">
-                                    {post.summary.substring(0, 50)}
+                                <p
+                                    class="is-size-5 is-italic my-6 has-background-light p-2">
+                                    {post.summary}
                                     ...
-                                    <a
+                                    <!-- <a
                                         href="#/posts/{post.id}/{post.slug}"
-                                        class="is-link">Read full</a>
+                                        class="is-link">Read full</a> -->
                                 </p>
+                                <div class="content">
+                                    {@html post.content}
+                                </div>
                             </div>
                         </div>
                         <footer class="card-footer">
