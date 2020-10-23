@@ -74,9 +74,9 @@
 <svelte:head>
     <title>Welcome to Dr Anil</title>
 </svelte:head>
-<main class="section container p-0 ">
+<main class="section container p-3 ">
     <nav
-        class="navbar container is-link px-2 has-shadow is-fixed-top has-background-black-bis">
+        class="navbar container has-shadow  is-link  is-fixed-top has-background-black">
         <div class="navbar-brand p-0">
             <a href="#/" class="navbar-item is-size-4 is-white">
                 <img

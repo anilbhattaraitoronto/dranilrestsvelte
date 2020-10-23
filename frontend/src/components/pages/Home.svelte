@@ -10,7 +10,7 @@
 </svelte:head>
 
 <article class="container m-0">
-    <div class="hero is-black">
+    <div class="hero is-black mx-0">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h2 class="title is-2">Welcome</h2>
