@@ -127,11 +127,11 @@
             </div>
         </div>
     </nav>
-    <div class="container columns my-2 ">
+    <div class="container columns py-3 ">
         <div class="container column is-three-quarters ">
             <Router {routes} />
         </div>
-        <div class=" container column hero is-light" id="cart">
+        <div class=" container column hero is-black" id="cart">
             <div class="hero-body">
                 <h2 class="title has-text-centered">Recent</h2>
                 {#if $postTitles.length > 0}
@@ -144,7 +144,7 @@
                             <li>
                                 <a
                                     href="#/posts/{item.id}/{item.slug}"
-                                    class="is-link"
+                                    class="has-text-warning"
                                     on:click={() => getPostDetail(item.id)}>{item.title}</a>
                             </li>
                             <hr />
