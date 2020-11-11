@@ -12,7 +12,7 @@
     <title>{params.slug} | Dr Anil B</title>
 </svelte:head>
 {#if $postDetail}
-    <div class=" columns post p-0 m-0">
+    <div class=" columns post px-0 mx-0">
         {#if $postDetail.imageurl}
             <div class=" column card-image p-0 is-one-third-desktop">
                 <figure class="image is-4by3" transition:fade>
