@@ -128,7 +128,7 @@
         </div>
     </nav>
     <div class="container columns m-0 ">
-        <div class="container column is-three-quarters p-0 ">
+        <div class="container column is-three-quarters px-0 ">
             <Router {routes} />
         </div>
         <div class=" container column p-0" id="cart">
