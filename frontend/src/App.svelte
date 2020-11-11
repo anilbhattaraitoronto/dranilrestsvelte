@@ -74,7 +74,7 @@
 <svelte:head>
     <title>Welcome to Dr Anil</title>
 </svelte:head>
-<main class="section container p-3 ">
+<main class="section container p-0 ">
     <nav
         class="navbar container has-shadow  is-link  is-fixed-top has-background-black">
         <div class="navbar-brand p-0">
@@ -127,11 +127,11 @@
             </div>
         </div>
     </nav>
-    <div class="container columns py-3 ">
-        <div class="container column is-three-quarters ">
+    <div class="container columns m-0 ">
+        <div class="container column is-three-quarters p-0 ">
             <Router {routes} />
         </div>
-        <div class=" container column hero is-black" id="cart">
+        <div class=" container column p-0" id="cart">
             <div class="hero-body">
                 <h2 class="title has-text-centered">Recent</h2>
                 {#if $postTitles.length > 0}
@@ -144,7 +144,7 @@
                             <li>
                                 <a
                                     href="#/posts/{item.id}/{item.slug}"
-                                    class="has-text-warning"
+                                    class="has-text-link"
                                     on:click={() => getPostDetail(item.id)}>{item.title}</a>
                             </li>
                             <hr />

@@ -12,9 +12,9 @@
     <title>{params.slug} | Dr Anil B</title>
 </svelte:head>
 {#if $postDetail}
-    <div class=" columns post mt-6 p-2">
+    <div class=" columns post p-0 m-0">
         {#if $postDetail.imageurl}
-            <div class=" column card-image is-one-third">
+            <div class=" column card-image is-one-third p-0">
                 <figure class="image is-4by3" transition:fade>
                     <img src={$postDetail.imageurl} alt="" />
                 </figure>
@@ -26,7 +26,7 @@
                 </figure>
             </div>
         {/if}
-        <div class=" column card-content">
+        <div class=" column">
             <h3 class="subtitle">
                 <a
                     href="#/posts/{$postDetail.category.slug}">{$postDetail.category.name}</a>

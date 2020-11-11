@@ -9,9 +9,9 @@
     <title>Welcome to Dr Anil Bhattarai's Page</title>
 </svelte:head>
 
-<article class="container m-0">
-    <div class="hero is-black mx-0">
-        <div class="hero-body">
+<article class="container m-0 p-0">
+    <div class="hero mx-0 p-0">
+        <div class="hero-body p-0">
             <div class="container has-text-centered">
                 <h2 class="title is-2">Welcome</h2>
                 <p class="has-text-warning-dark">A new world awaits, always!</p>
