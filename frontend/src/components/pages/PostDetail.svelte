@@ -14,13 +14,13 @@
 {#if $postDetail}
     <div class=" columns post p-0 m-0">
         {#if $postDetail.imageurl}
-            <div class=" column card-image is-one-third p-0">
+            <div class=" column card-image p-0 is-one-third-desktop">
                 <figure class="image is-4by3" transition:fade>
                     <img src={$postDetail.imageurl} alt="" />
                 </figure>
             </div>
         {:else if $postDetail.image}
-            <div class=" column card-image is-one-third">
+            <div class=" column card-image">
                 <figure class="image is-4by3" transition:fade>
                     <img src={$postDetail.imageurl} alt="" />
                 </figure>
