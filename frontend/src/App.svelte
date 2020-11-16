@@ -148,7 +148,7 @@
                                     class="has-text-link"
                                     on:click={() => getPostDetail(item.id)}>{item.title}</a>
                             </p>
-                            <hr />
+                            <hr class="my-2" />
                         </div>
                     {/each}
                 {/if}
