@@ -1,5 +1,6 @@
 <script>
     import { featuredPosts } from "../../stores/postStore.js";
+    import Welcome from "../ui/Welcome.svelte";
     import { fade } from "svelte/transition";
     let homeImage =
         "https://images.unsplash.com/photo-1565527891433-117833507ed8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80";
@@ -10,6 +11,7 @@
 </svelte:head>
 
 <article class="container m-0 px-0">
+    <!-- <Welcome /> -->
     <div class="hero mx-0 px-0">
         <div class="hero-body px-0">
             <div class="container has-text-centered">

@@ -137,16 +137,17 @@
                 {#if $postTitles.length > 0}
                     {#each $postTitles as item}
                         <div>
-                            <p>{item.category.name}</p>
-                            <p class="is-italic is-size-7">
+                            <p class="is-size-7 is-italic">
                                 {new Date(item.posted_date).toDateString()}
+                                / #{item.category.name}
                             </p>
-                            <li>
+
+                            <p>
                                 <a
                                     href="#/posts/{item.id}/{item.slug}"
                                     class="has-text-link"
                                     on:click={() => getPostDetail(item.id)}>{item.title}</a>
-                            </li>
+                            </p>
                             <hr />
                         </div>
                     {/each}
